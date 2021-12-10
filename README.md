@@ -46,6 +46,11 @@ password : admin123
 ##### After Delete
 ![image](https://user-images.githubusercontent.com/60839928/145529718-ebf54325-55fc-4eb9-994d-fef41bde97ae.png)
 
+### Log-Out
+
+![image](https://user-images.githubusercontent.com/60839928/145530884-1504b741-c508-4830-a665-a80fcf37f316.png)
+
+
 # Tools and technologies
 
 Java 8
