@@ -62,7 +62,7 @@ password : admin123
 
 •          IDE- Spring Tool suite 4
 
-•          Framework - Spring Boot
+•          Framework - Spring Boot, spring boot security
 
 •          Database – MySql Workbench 8.0, 
            Spring Boot JDBC, 
