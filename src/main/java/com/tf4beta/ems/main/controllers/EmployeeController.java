@@ -18,7 +18,6 @@ import com.tf4beta.ems.main.service.EmployeeService;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-	@Autowired
 	private EmployeeService employeeService;
 
 	@Autowired
