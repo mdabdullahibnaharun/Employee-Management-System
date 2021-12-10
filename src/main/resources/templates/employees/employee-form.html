@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<title>Employee Edit</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100hv;
+	overflow-x: hidden;
+}
+</style>
+</head>
+
+
+
+<body>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark "
+			style="background-color: #e3f2fd;">
+			
+			<a class="navbar-brand" href="/"> <img th:src="@{/images/pass_fail_160px.png}"class="d-inline-block align-text-top" width="30" height="30"  alt="icon"> myems.io</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link"
+						th:href="@{/logout}">Logout <img th:src="@{/images/sign_out_32px.png}"class="d-inline-block align-text-top" width="25" height="25"  alt="icon"></a></li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+
+	<br>
+
+	<div class="container">
+
+
+		<h3 align="center"> <img th:src="@{/images/profile_200px.png}"class="d-inline-block align-text-top" width="40" height="40"  alt="icon"> Employee Directory</h3>
+		<hr>
+
+		<p class="h4 mb-4">Add Employee</p>
+
+		<form action="#" th:action="@{/employees/save}"
+			th:object="${employee}" method="POST">
+			<!-- Add hidden form field to handle update -->
+			<input type="hidden" th:field="*{id}" /> <input type="text"
+				th:field="*{firstName}" class="form-control mb-2 col-4"
+				placeholder="First Name"> <input type="text"
+				th:field="*{lastName}" class="form-control mb-2 col-4"
+				placeholder="Last Name"> <input type="text"
+				th:field="*{email}" class="form-control mb-2 col-4"
+				placeholder="Email"> <input type="number"
+				th:field="*{phone}" class="form-control mb-2 col-4"
+				placeholder="Phone"> <input type="text"
+				th:field="*{framework}" class="form-control mb-2 col-4"
+				placeholder="Framework"> <input type="number"
+				th:field="*{salary}" class="form-control mb-2 col-4"
+				placeholder="Salary"> <input type="text"
+				th:field="*{address}" class="form-control mb-2 col-4"
+				placeholder="Address">
+
+			<button type="submit" class="btn btn-success mb-2 col-2">Add</button>
+		</form>
+		<a th:href="@{/employees/list}" class="btn btn-warning mb-2 col-2">Back
+		</a>
+	</div>
+</body>
+</html>
