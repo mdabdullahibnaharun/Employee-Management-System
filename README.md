@@ -58,22 +58,30 @@ password : admin123
 
 # Tools and technologies
 
-JDK - Java 1.8
+•          JDK - Java 1.8
 
-IDE- Spring Tool suite 4
+•          IDE- Spring Tool suite 4
 
-Framework - Spring Boot
+•          Framework - Spring Boot
 
-Database – MySql Workbench 8.0, 
+•          Database – MySql Workbench 8.0, 
            Spring Boot JDBC, 
            Spring Data JPA (Hibernate)
            
-Front-end: 
+•          Front-end: 
 HTML, 
 bootstrap 4, 
 Thymeleaf.
 
+# Challenges Faced 
 
+•	  Faced error into database issue.
+
+•	  Faced not getting any data from user input.
+
+•	  Front end logical issue.
+
+•	  Faced Some Little bugs.
 
 
 
