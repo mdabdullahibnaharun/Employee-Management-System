@@ -24,7 +24,7 @@ body {
 	overflow-x: hidden;
 }
 </style>
-<title >Employee Directory</title>
+<title>Dash-board</title>
 </head>
 
 <body>
@@ -32,10 +32,14 @@ body {
 	<section id="header">
 		<nav class="navbar navbar navbar-dark bg-dark navbar-expand-lg  "
 			style="background-color: #e3f2fd;">
-			
-		
-			
-			<a class="navbar-brand" href="/">	<img th:src="@{/images/pass_fail_160px.png}"class="d-inline-block align-text-top" width="30" height="30"  alt="icon"> myems.io</a>
+
+
+
+			<a class="navbar-brand" href="/"> <img
+				th:src="@{/images/pass_fail_160px.png}"
+				class="d-inline-block align-text-top" width="30" height="30"
+				alt="icon"> myems.io
+			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -45,18 +49,31 @@ body {
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link"
-						th:href="@{/logout}">Logout <img th:src="@{/images/sign_out_32px.png}"class="d-inline-block align-text-top" width="25" height="25"  alt="icon"></a></li>
+						th:href="@{/logout}">Logout <img
+							th:src="@{/images/sign_out_32px.png}"
+							class="d-inline-block align-text-top" width="25" height="25"
+							alt="icon"></a></li>
 				</ul>
 			</div>
 		</nav>
 	</section>
 	<br>
 	<div class="container" align="center">
-		<h3> <img th:src="@{/images/profile_200px.png}"class="d-inline-block align-text-top" width="40" height="40"  alt="icon"> Employee Directory</h3>
+		<h3>
+			<img th:src="@{/images/profile_200px.png}"
+				class="d-inline-block align-text-top" width="40" height="40"
+				alt="icon"> Employee Directory
+		</h3>
 		<hr>
-		<div align="left">
+		<div class="d-flex justify-content-between">
 			<a th:href="@{/employees/showFormForAdd}"
 				class="btn btn-primary btn-sm mb-3"> Add Employee </a> <br>
+
+			<form action="/employees/searchByName">
+				<!-- Search form -->
+				<input class="form-control" type="text" placeholder="Search By Name.."
+					aria-label="Search" name="searchName">
+			</form>
 		</div>
 
 		<table class="table  table-hover ">
@@ -76,7 +93,8 @@ body {
 
 				<!--<td th:text="${tempEmployee.firstName}" />-->
 				<!--<td th:text="${tempEmployee.lastName}" />-->
-				<td><p th:text="${tempEmployee.firstName +'  '+ tempEmployee.lastName }"/></td>
+				<td><p
+						th:text="${tempEmployee.firstName +'  '+ tempEmployee.lastName }" /></td>
 				<td th:text="${tempEmployee.email}" />
 				<td th:text="${tempEmployee.framework}" />
 				<td><a
@@ -93,7 +111,10 @@ body {
 			<tbody>
 
 			</tbody>
+
 		</table>
+		<a th:href="@{/employees/list}" class="btn btn-warning btn-sm mb-3">Reload
+		</a>
 	</div>
 </body>
 

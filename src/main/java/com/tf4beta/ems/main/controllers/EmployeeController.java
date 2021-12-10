@@ -25,6 +25,12 @@ public class EmployeeController {
 		this.employeeService = employeeService;
 	}
 
+	@GetMapping("/index")
+	public String employeeIndex() {
+
+		return "employees/employee-index.html";
+	}
+
 	@GetMapping("/list")
 	public String listEmployees(Model theModel) {
 		List<Employee> theEmployees = employeeService.findAll();
@@ -32,13 +38,22 @@ public class EmployeeController {
 
 		return "employees/list-employees";
 	}
-	
-	
+
 	@RequestMapping("/showEmployeeDetails")
 	public String viewEmploye(@RequestParam("employeeId") int theId, Model model) {
 		Employee employee = employeeService.findById(theId);
 		model.addAttribute("employee", employee);
 		return "employees/employee-view";
+	}
+
+	@GetMapping("/searchByName")
+	public String searchByName(@RequestParam("searchName") String searchName, Model model) {
+
+		List<Employee> theEmployees = employeeService.searchByName(searchName);
+
+		model.addAttribute("employees", theEmployees);
+
+		return "employees/list-employees";
 	}
 
 	@GetMapping("/showFormForAdd")
@@ -63,13 +78,12 @@ public class EmployeeController {
 		employeeService.save(employee);
 		return "redirect:/employees/list";
 	}
-	
+
 	@PostMapping("/update")
 	public String updateEmployee(@ModelAttribute("employee") Employee employee) {
 		employeeService.update(employee);
 		return "redirect:/employees/list";
 	}
-
 
 	@GetMapping("/delete")
 	public String delete(@RequestParam("employeeId") int theId) {

@@ -19,9 +19,9 @@ public class EmployeeDao {
 	private JdbcTemplate jdbcTemplate;
 
 	public void save(Employee employee) {
-		String sql = "INSERT INTO employee ( address, email, firstname, framework, lastname, phone, salary) VALUES (?, ?, ?, ?, ?, ?,?)";
+		String sql = "INSERT INTO employee ( address, email, firstname, framework, lastname, phone, salary , joiningdate, retireddate) VALUES (?, ?, ?, ?, ?, ?,?,?,?)";
 		
-		jdbcTemplate.update(sql,employee.getAddress(),employee.getEmail(),employee.getFirstName(),employee.getFramework(),employee.getLastName(),employee.getPhone(),employee.getSalary());
+		jdbcTemplate.update(sql,employee.getAddress(),employee.getEmail(),employee.getFirstName(),employee.getFramework(),employee.getLastName(),employee.getPhone(),employee.getSalary(),employee.getJoiningdate(),employee.getRetireddate());
 	}
 
 	public void delete(int id) {
@@ -30,8 +30,8 @@ public class EmployeeDao {
 	}
 	
 	public void update(Employee employee) {
-		String sql = "UPDATE employee SET  address = ?, email = ?, firstname = ?, framework = ?, lastname = ?, phone = ?,salary = ? WHERE id = ? ";
-		jdbcTemplate.update(sql,employee.getAddress(),employee.getEmail(),employee.getFirstName(),employee.getFramework(),employee.getLastName(),employee.getPhone(),employee.getSalary(), employee.getId());
+		String sql = "UPDATE employee SET  address = ?, email = ?, firstname = ?, framework = ?, lastname = ?, phone = ?,salary = ?, joiningdate = ?, retireddate = ? WHERE id = ? ";
+		jdbcTemplate.update(sql,employee.getAddress(),employee.getEmail(),employee.getFirstName(),employee.getFramework(),employee.getLastName(),employee.getPhone(),employee.getSalary(),employee.getJoiningdate(),employee.getRetireddate(), employee.getId());
 	}
 
 	public Employee findById(int id) {

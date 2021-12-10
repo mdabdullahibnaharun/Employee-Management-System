@@ -94,13 +94,23 @@ body {
 				<td th:text="${employee.framework}"></td>
 			</tr>
 			<tr th:if="${employee}">
-				<th>salary</th>
+				<th>Salary</th>
 				<td th:text="${employee.salary}"></td>
 			</tr>
 
 			<tr th:if="${employee}">
 				<th>Address</th>
 				<td th:text="${employee.address}"></td>
+			</tr>
+			
+			<tr th:if="${employee}">
+				<th> Joining-date</th>
+				<td th:text="${employee.joiningdate}"></td>
+			</tr>
+			
+			<tr th:if="${employee}">
+				<th>Retired-date</th>
+				<td th:text="${employee.retireddate}"></td>
 			</tr>
 			<tbody>
 			</tbody>

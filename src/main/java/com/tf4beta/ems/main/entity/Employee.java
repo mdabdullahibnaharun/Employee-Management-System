@@ -36,14 +36,20 @@ public class Employee {
 
 	@Column(name = "address")
 	private String address;
+	
+	@Column(name = "joiningdate")
+	private String joiningdate;
+	
+	@Column(name = "retireddate")
+	private String retireddate;
 
 	public Employee() {
-		super();
+		
 		// TODO Auto-generated constructor stub
 	}
 
 	public Employee(int id, String firstName, String lastName, String email, String phone, String framework,
-			String salary, String address) {
+			String salary, String address, String joiningdate, String retireddate) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -53,6 +59,8 @@ public class Employee {
 		this.framework = framework;
 		this.salary = salary;
 		this.address = address;
+		this.joiningdate = joiningdate;
+		this.retireddate = retireddate;
 	}
 
 	public int getId() {
@@ -119,14 +127,35 @@ public class Employee {
 		this.address = address;
 	}
 
+	public String getJoiningdate() {
+		return joiningdate;
+	}
+
+	public void setJoiningdate(String joiningdate) {
+		this.joiningdate = joiningdate;
+	}
+
+	public String getRetireddate() {
+		return retireddate;
+	}
+
+	public void setRetireddate(String retireddate) {
+		this.retireddate = retireddate;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", phone=" + phone + ", framework=" + framework + ", salary=" + salary + ", address=" + address + "]";
+				+ ", phone=" + phone + ", framework=" + framework + ", salary=" + salary + ", address=" + address
+				+ ", joiningdate=" + joiningdate + ", retireddate=" + retireddate + ", getId()=" + getId()
+				+ ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName() + ", getEmail()="
+				+ getEmail() + ", getPhone()=" + getPhone() + ", getFramework()=" + getFramework() + ", getSalary()="
+				+ getSalary() + ", getAddress()=" + getAddress() + ", getJoiningdate()=" + getJoiningdate()
+				+ ", getRetireddate()=" + getRetireddate() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
-	
-	
 
+	
 	
 
 }

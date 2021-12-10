@@ -22,6 +22,8 @@ public class EmployeeRowMapper implements RowMapper<Employee>{
 		employee.setFramework(rs.getString("framework"));
 		employee.setPhone(rs.getString("phone"));
 		employee.setSalary(rs.getString("salary"));
+		employee.setJoiningdate(rs.getString("joiningdate"));
+		employee.setRetireddate(rs.getString("retireddate"));
 		return employee;
 	}
 
