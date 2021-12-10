@@ -73,6 +73,10 @@ Employee Management System CRUD project using Spring Boot,Spring JDBC, Thymeleaf
 
 ![image](https://user-images.githubusercontent.com/60839928/145621530-ce093746-2850-4978-806c-4afa9c59c1ac.png)
 
+###### Sql-Query
+![image](https://user-images.githubusercontent.com/60839928/145622318-cf63c37a-286b-4736-b47b-ee7cde1504b2.png)
+
+
 
 
 # Tools and technologies
