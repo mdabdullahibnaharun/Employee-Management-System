@@ -50,26 +50,31 @@ password : admin123
 
 ![image](https://user-images.githubusercontent.com/60839928/145530884-1504b741-c508-4830-a665-a80fcf37f316.png)
 
+### DataBase
+
+![image](https://user-images.githubusercontent.com/60839928/145533054-1c614fc8-1055-4143-be95-726275474da5.png)
+
+
 
 # Tools and technologies
 
-Java 8
+JDK - Java 1.8
 
-Spring Boot
+IDE- Spring Tool suite 4
 
-Spring Boot JDBC
+Framework - Spring Boot
 
-Spring Data JPA (Hibernate)
+Database – MySql Workbench 8.0, 
+           Spring Boot JDBC, 
+           Spring Data JPA (Hibernate)
+           
+Front-end: 
+HTML, 
+bootstrap 4, 
+Thymeleaf.
 
-MySQL
 
-Html
 
-bootstrap 4
-
-Thymeleaf
-
-STS 4
 
 
 # Author
