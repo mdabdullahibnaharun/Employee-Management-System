@@ -16,37 +16,54 @@ Employee Management System CRUD project using Spring Boot,Spring JDBC, Thymeleaf
 
 ![image](https://user-images.githubusercontent.com/60839928/145528211-60eb4807-c66e-49e5-9657-0e9b6af8da82.png)
 
+### Welcome Page
+
+![image](https://user-images.githubusercontent.com/60839928/145619849-c2e77fa8-7db4-49e0-867e-215a263ed84e.png)
+
 ### Employee List
 
-![image](https://user-images.githubusercontent.com/60839928/145529087-78b488b5-0524-48ea-beb4-2c1498d01bc5.png)
+![image](https://user-images.githubusercontent.com/60839928/145620101-45aa6a5a-8fc3-4374-8c3e-f5d62e3b0905.png)
+
 
 ### Add Employee
 
-![image](https://user-images.githubusercontent.com/60839928/145528636-bd750691-5fb0-499b-a460-469f33f67d71.png)
+![image](https://user-images.githubusercontent.com/60839928/145620310-4c4ab56b-38d8-49f8-a20d-200a513e71be.png)
 
 ### Update Employee
 
 ##### Before Update
-![image](https://user-images.githubusercontent.com/60839928/145529183-1fc91910-2c33-49cc-842f-66cce00dafc8.png)
+![image](https://user-images.githubusercontent.com/60839928/145620580-c7eeb25f-7f5c-4e95-aae0-42cf1aa6b475.png)
 
 ##### Edit Email
-![image](https://user-images.githubusercontent.com/60839928/145529287-1627725e-529f-461d-aba6-b05dd96933bc.png)
+![image](https://user-images.githubusercontent.com/60839928/145620626-59afbcb4-7c48-434f-b90f-4c4441da09ae.png)
 
 ##### After Update
-![image](https://user-images.githubusercontent.com/60839928/145529368-4bf0d10c-c1dd-4829-a651-9edbb1df4ff8.png)
+![image](https://user-images.githubusercontent.com/60839928/145620662-789a27b6-fe5a-492d-9ae6-13a051f29a49.png)
 
 #### View Employee Details
 
-![image](https://user-images.githubusercontent.com/60839928/145529522-e0324937-e161-4a6f-84ee-0b33b804922e.png)
+##### Active Employee
+![image](https://user-images.githubusercontent.com/60839928/145621014-2e987365-b19f-47a0-b7ff-69a4c17bd3d7.png)
+
+##### Retired Employee
+![image](https://user-images.githubusercontent.com/60839928/145621087-3f89e72e-5bfd-42c5-94d9-c730f11b9c09.png)
+
+### Search Employee Name
+
+##### Before Search
+![image](https://user-images.githubusercontent.com/60839928/145621805-788829ba-35d8-4e83-bab7-1e96aa2463b4.png)
+
+##### After Search
+![image](https://user-images.githubusercontent.com/60839928/145621944-63fb5d26-7daa-44f2-96cb-aed8539d02f1.png)
 
 
 ### Delete Employee
 
 ##### Before Delete
-![image](https://user-images.githubusercontent.com/60839928/145529630-52f68923-05b3-4ee6-a39e-848c9a77362d.png)
+![image](https://user-images.githubusercontent.com/60839928/145621391-a34918fc-44d6-456c-8c4c-47fec8760839.png)
 
 ##### After Delete
-![image](https://user-images.githubusercontent.com/60839928/145529718-ebf54325-55fc-4eb9-994d-fef41bde97ae.png)
+![image](https://user-images.githubusercontent.com/60839928/145621450-e1a94e37-9cd7-40c2-896f-28bad3cc58e0.png)
 
 ### Log-Out
 
@@ -54,7 +71,7 @@ Employee Management System CRUD project using Spring Boot,Spring JDBC, Thymeleaf
 
 ### DataBase
 
-![image](https://user-images.githubusercontent.com/60839928/145533054-1c614fc8-1055-4143-be95-726275474da5.png)
+![image](https://user-images.githubusercontent.com/60839928/145621530-ce093746-2850-4978-806c-4afa9c59c1ac.png)
 
 
 
