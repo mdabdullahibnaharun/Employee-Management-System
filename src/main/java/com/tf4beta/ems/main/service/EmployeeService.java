@@ -49,11 +49,13 @@ public class EmployeeService {
 
 		List<Employee> allEmployees = employeeDao.findAll();
 		List<Employee> foundEmployees = new ArrayList<>();
+		
 		for(Employee employee : allEmployees) {
+			
 			String fname = employee.getFirstName();
 			String lname = employee.getLastName();
 			
-			if ( ((fname.toLowerCase().contains(searchName)) || (lname.toLowerCase().contains(searchName))) ){
+			if ( (fname.toLowerCase().contains(searchName)) || (lname.toLowerCase().contains(searchName)) ){
 				foundEmployees.add(employee);
 			}
 		}

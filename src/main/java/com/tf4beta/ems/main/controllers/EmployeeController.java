@@ -33,7 +33,9 @@ public class EmployeeController {
 
 	@GetMapping("/list")
 	public String listEmployees(Model theModel) {
+		
 		List<Employee> theEmployees = employeeService.findAll();
+		
 		theModel.addAttribute("employees", theEmployees);
 
 		return "employees/list-employees";
@@ -41,8 +43,11 @@ public class EmployeeController {
 
 	@RequestMapping("/showEmployeeDetails")
 	public String viewEmploye(@RequestParam("employeeId") int theId, Model model) {
+		
 		Employee employee = employeeService.findById(theId);
+		
 		model.addAttribute("employee", employee);
+		
 		return "employees/employee-view";
 	}
 
@@ -58,7 +63,9 @@ public class EmployeeController {
 
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
+		
 		Employee employee = new Employee();
+		
 		theModel.addAttribute("employee", employee);
 
 		return "employees/employee-form";
@@ -66,6 +73,7 @@ public class EmployeeController {
 
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("employeeId") int theId, Model theModel) {
+		
 		Employee employee = employeeService.findById(theId);
 
 		theModel.addAttribute("employee", employee);
@@ -75,7 +83,9 @@ public class EmployeeController {
 
 	@PostMapping("/save")
 	public String saveEmployee(@ModelAttribute("employee") Employee employee) {
+		
 		employeeService.save(employee);
+		
 		return "redirect:/employees/list";
 	}
 
