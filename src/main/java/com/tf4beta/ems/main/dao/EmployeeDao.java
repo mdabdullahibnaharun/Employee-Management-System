@@ -43,4 +43,9 @@ public class EmployeeDao {
 		String sql = "SELECT * FROM employee";
 		return jdbcTemplate.query(sql, new EmployeeRowMapper());
 	}
+	
+	public List<Employee> searchByName(String searchName){
+		String sql = "SELECT * FROM employee WHERE firstname LIKE '%" + searchName + "%'  OR lastname LIKE '%" +searchName +"%' ";
+		return jdbcTemplate.query(sql, new EmployeeRowMapper());
+	}
 }

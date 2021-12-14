@@ -1,6 +1,5 @@
 package com.tf4beta.ems.main.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,19 +45,9 @@ public class EmployeeService {
 	}
 
 	public List<Employee> searchByName(String searchName) {
-
-		List<Employee> allEmployees = employeeDao.findAll();
-		List<Employee> foundEmployees = new ArrayList<>();
 		
-		for(Employee employee : allEmployees) {
-			
-			String fname = employee.getFirstName();
-			String lname = employee.getLastName();
-			
-			if ( (fname.toLowerCase().contains(searchName)) || (lname.toLowerCase().contains(searchName)) ){
-				foundEmployees.add(employee);
-			}
-		}
+		List<Employee> foundEmployees = employeeDao.searchByName(searchName);
+		
 		return foundEmployees;
 	}
 

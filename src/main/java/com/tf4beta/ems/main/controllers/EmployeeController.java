@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.tf4beta.ems.main.entity.Employee;
 import com.tf4beta.ems.main.service.EmployeeService;
 
@@ -55,6 +54,10 @@ public class EmployeeController {
 	public String searchByName(@RequestParam("searchName") String searchName, Model model) {
 
 		List<Employee> theEmployees = employeeService.searchByName(searchName);
+		
+		if(theEmployees.isEmpty()) {
+			model.addAttribute("searchWarning","Sorry!! Search not found."); 
+		}
 
 		model.addAttribute("employees", theEmployees);
 
@@ -91,13 +94,17 @@ public class EmployeeController {
 
 	@PostMapping("/update")
 	public String updateEmployee(@ModelAttribute("employee") Employee employee) {
+		
 		employeeService.update(employee);
+		
 		return "redirect:/employees/list";
 	}
 
 	@GetMapping("/delete")
 	public String delete(@RequestParam("employeeId") int theId) {
+		
 		employeeService.deleteById(theId);
+		
 		return "redirect:/employees/list";
 	}
 }

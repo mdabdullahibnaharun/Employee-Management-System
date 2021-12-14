@@ -115,6 +115,7 @@ body {
 		</table>
 		<a th:href="@{/employees/list}" class="btn btn-warning btn-sm mb-3">Reload
 		</a>
+		<p class="text-danger warning" th:if="${searchWarning}" th:text="${searchWarning}"></p>
 	</div>
 </body>
 
